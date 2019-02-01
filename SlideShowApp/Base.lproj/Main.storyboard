@@ -40,6 +40,9 @@
                                         <rect key="frame" x="106" y="0.0" width="47" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <state key="normal" title="再生"/>
+                                        <connections>
+                                            <action selector="imageTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rfw-0w-3UX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z52-9X-zwl">
                                         <rect key="frame" x="203" y="0.0" width="47" height="60"/>

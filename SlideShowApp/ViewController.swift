@@ -56,5 +56,24 @@ class ViewController: UIViewController {
         slideImage.image = imageSlideBox[count]
     }
     
+    @IBAction func imageTimer(_ sender: Any) {
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: ({ (timer) in
+            
+            if self.count > 1{
+                self.count = 0
+            }else{
+                self.count += 1
+            }
+            self.slideImage.image = self.imageSlideBox[self.count]
+            
+            })
+            )
+
+        
+        
+        
+        
+    }
     
 }
