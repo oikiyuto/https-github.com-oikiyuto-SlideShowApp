@@ -34,6 +34,17 @@ class ViewController: UIViewController {
         
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let imageMain : ImageMain = segue.destination as! ImageMain
+        
+        imageMain.imageCount = count
+        
+        
+        
+    }
+    
     @IBAction func imageNext(_ sender: Any) {
         
         if count > 1{
@@ -70,10 +81,9 @@ class ViewController: UIViewController {
             })
             )
 
-        
-        
-        
-        
+    }
+
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
 }
