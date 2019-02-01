@@ -9,12 +9,52 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var imageBox: UIImageView!
+   
+    var count:Int = 0
+    var timer = Timer()
 
+    
+    @IBOutlet weak var slideImage: UIImageView!
+
+    let image0 = UIImage(named: "image0")
+    let image1 = UIImage(named: "image1")
+    let image2 = UIImage(named: "image2")
+    var imageSlideBox = [UIImage]()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        imageSlideBox = [image0!,image1!,image2!]
+        slideImage.image = imageSlideBox[0]
+        
+
     }
+    @IBAction func imageNext(_ sender: Any) {
+        
+        if count > 1{
+            count = 0
+        }else{
+        count += 1
+        }
+        slideImage.image = imageSlideBox[count]
+        
+     }
 
-
+    @IBAction func imageBack(_ sender: Any) {
+        
+        if count <
+            1 {
+            count = 2
+        }else{
+            count -= 1
+        }
+        slideImage.image = imageSlideBox[count]
+    }
+    
+    
 }
-
