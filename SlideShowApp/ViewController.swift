@@ -14,7 +14,11 @@ class ViewController: UIViewController {
    
     var count:Int = 0
     var timer = Timer()
+    
+    var tapCount:Int = 0
 
+    @IBOutlet weak var backoutlet: UIButton!
+    @IBOutlet weak var nextoutlet: UIButton!
     
     @IBOutlet weak var slideImage: UIImageView!
 
@@ -31,6 +35,9 @@ class ViewController: UIViewController {
 
         imageSlideBox = [image0!,image1!,image2!]
         slideImage.image = imageSlideBox[0]
+        
+      
+
         
 
     }
@@ -69,6 +76,13 @@ class ViewController: UIViewController {
     
     @IBAction func imageTimer(_ sender: Any) {
         
+        tapCount += 1
+        if tapCount % 2 == 1{
+            
+            backoutlet.isEnabled = false
+            nextoutlet.isEnabled = false
+            
+            
         timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: ({ (timer) in
             
             if self.count > 1{
@@ -79,7 +93,16 @@ class ViewController: UIViewController {
             self.slideImage.image = self.imageSlideBox[self.count]
             
             })
-            )
+            )}else{
+            
+            backoutlet.isEnabled = true
+            nextoutlet.isEnabled = true
+            
+            self.timer.invalidate()
+            
+        }
+        
+        
 
     }
 

@@ -80,7 +80,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="backoutlet" destination="fvo-7m-2Te" id="8le-iB-5ka"/>
                         <outlet property="imageBox" destination="DW5-Au-UEJ" id="JH0-0m-2Ry"/>
+                        <outlet property="nextoutlet" destination="z52-9X-zwl" id="qTN-sE-9Vd"/>
                         <outlet property="slideImage" destination="DW5-Au-UEJ" id="KLf-Eh-SWg"/>
                     </connections>
                 </viewController>
